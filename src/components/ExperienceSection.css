@@ -2,6 +2,12 @@
   padding: 4rem 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .experience {
+    padding: 2.2rem 1.25rem;
+  }
+}
+
 .experience__container {
   max-width: 1200px;
   margin: 0 auto;

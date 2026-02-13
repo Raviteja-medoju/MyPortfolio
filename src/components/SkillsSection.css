@@ -2,6 +2,12 @@
   padding: 3.5rem 1.5rem;
 }
 
+@media (max-width: 480px) {
+  .skills {
+    padding: 2rem 1.25rem;
+  }
+}
+
 .skills__container {
   max-width: 1020px;
   margin: 0 auto;

@@ -111,3 +111,29 @@ a.contact__value:hover {
   height: 100%;
   fill: currentColor;
 }
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 2.1rem 1.25rem;
+  }
+
+  .contact__row {
+    display: grid;
+    grid-template-columns: 1.1rem 4.2rem minmax(0, 1fr);
+    align-items: start;
+    column-gap: 0.65rem;
+    row-gap: 0.2rem;
+  }
+
+  .contact__label {
+    min-width: 0;
+    font-size: 0.74rem;
+  }
+
+  .contact__value {
+    min-width: 0;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}

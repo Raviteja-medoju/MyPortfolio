@@ -17,23 +17,25 @@ const PROJECTS = [
     title: 'FinTech Loan & Credit Platform',
     summary: 'Built secure microservices for loan origination, credit approvals, and transaction processing.',
     tech: 'Java, Spring Boot, SQL Server, Kafka, AWS',
-    image: '/projects/project-microservices.jpg',
+    image: 'projects/fintech-loan-credit.svg',
   },
   {
     title: 'FHIR/HL7 Integration Gateway',
     summary: 'Developed APIs and integration flows for claims, scheduling, and patient interoperability.',
     tech: 'Spring Boot, REST APIs, HL7, FHIR, SQL',
-    image: '/projects/project-fhir.jpg',
+    image: 'projects/fhir-hl7-gateway.svg',
   },
   {
     title: 'CI/CD Delivery Blueprint',
     summary: 'Automated build-test-deploy workflow to improve release speed and reliability.',
     tech: 'Jenkins, GitHub, Docker, Kubernetes, AWS',
-    image: '/projects/project-cicd.jpg',
+    image: 'projects/cicd-delivery-blueprint.svg',
   },
 ]
 
 export default function SkillsSection() {
+  const base = import.meta.env.BASE_URL
+
   return (
     <section id="skills" className="skills">
       <div className="skills__container">
@@ -60,11 +62,11 @@ export default function SkillsSection() {
               <article key={project.title} className="skills__project-card">
                 <div className="skills__project-media">
                   <img
-                    src={project.image}
+                    src={`${base}${project.image}`}
                     alt={project.title}
                     className="skills__project-image"
                     onError={(e) => {
-                      e.target.src = '/projects/placeholder.svg'
+                      e.target.src = `${base}projects/placeholder.svg`
                       e.target.alt = 'Project placeholder image'
                     }}
                   />

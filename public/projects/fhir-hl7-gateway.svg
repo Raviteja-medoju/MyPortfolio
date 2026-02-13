@@ -1,0 +1,22 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1F2E"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+  <circle cx="1020" cy="90" r="130" fill="#22D3EE" fill-opacity="0.16"/>
+  <circle cx="180" cy="600" r="110" fill="#34D399" fill-opacity="0.18"/>
+  <rect x="150" y="110" width="900" height="460" rx="28" fill="#07141E" stroke="#155E75" stroke-width="2"/>
+  <rect x="215" y="180" width="250" height="170" rx="18" fill="#0B2535" stroke="#0EA5E9"/>
+  <text x="280" y="273" fill="#67E8F9" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">HL7</text>
+  <rect x="735" y="180" width="250" height="170" rx="18" fill="#0B2535" stroke="#0EA5E9"/>
+  <text x="805" y="273" fill="#67E8F9" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">FHIR</text>
+  <path d="M475 265H725" stroke="#22D3EE" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 14"/>
+  <circle cx="600" cy="265" r="44" fill="#0F172A" stroke="#22D3EE" stroke-width="6"/>
+  <path d="M575 265H625M600 240V290" stroke="#22D3EE" stroke-width="8" stroke-linecap="round"/>
+  <rect x="215" y="385" width="770" height="120" rx="18" fill="#0B2535" stroke="#0EA5E9"/>
+  <text x="250" y="455" fill="#CCFBF1" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Claims  "  Scheduling  "  Patient Interoperability</text>
+  <text x="150" y="80" fill="#99F6E4" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">FHIR / HL7 Integration Gateway</text>
+</svg>

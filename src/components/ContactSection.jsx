@@ -2,7 +2,7 @@ import './ContactSection.css'
 
 const ITEMS = [
   { label: 'Email', href: 'mailto:ravitejachary.work@gmail.com', value: 'ravitejachary.work@gmail.com', icon: 'mail' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/Raviteja_Medoju', value: 'linkedin.com/in/Raviteja_Medoju', icon: 'linkedin' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ravi-teja-medoju-7a8a0b19a/', value: 'linkedin.com/in/Raviteja_Medoju', icon: 'linkedin' },
   { label: 'Mobile', href: 'tel:+15162448913', value: '+1 516-244-8913', icon: 'phone' },
   { label: 'Location', value: 'Dallas, TX', icon: 'location' },
 ]
