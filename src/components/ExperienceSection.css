@@ -1,0 +1,94 @@
+.experience {
+  padding: 4rem 1.5rem;
+}
+
+.experience__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience__title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 1.75rem;
+}
+
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience__card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.35);
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.experience__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.experience__company {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.experience__role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0.2rem 0 0;
+}
+
+.experience__period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.experience__tech {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+.experience__bullets {
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.experience__bullets li {
+  margin-bottom: 0.35rem;
+}
+
+.experience__bullets li:last-child {
+  margin-bottom: 0;
+}

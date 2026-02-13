@@ -1,0 +1,237 @@
+.about {
+  padding: 4rem 1.5rem;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about__title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+}
+
+.about__summary {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.about__summary strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about__blocks {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.about__block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about__block:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about__block-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+
+.about__block-main {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.about__block-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+}
+
+.about__education-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about__education-text {
+  flex: 1 1 320px;
+  min-width: 200px;
+}
+
+.about__education-photo {
+  flex-shrink: 0;
+  width: min(420px, 100%);
+  max-width: 100%;
+  aspect-ratio: 300 / 380;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.about__coursework {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.6rem 0 0;
+  line-height: 1.5;
+}
+
+.about__masters-content {
+  margin-top: 1.25rem;
+}
+
+.about__masters-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1rem 0 0.35rem;
+}
+
+.about__masters-heading:first-child {
+  margin-top: 0;
+}
+
+.about__masters-note {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about__graduation-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .about__education-photo {
+    width: min(320px, 100%);
+    aspect-ratio: 300 / 380;
+  }
+}
+
+.about__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.about__certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.about__cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease,
+    background 0.25s ease;
+}
+
+.about__cert-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.about__cert-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  max-height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about__cert-item:hover .about__cert-img-wrap {
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.about__cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.about__cert-item:hover .about__cert-img {
+  transform: scale(1.03);
+}
+
+.about__cert-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.about__cert-item:hover .about__cert-label {
+  color: var(--accent);
+}
+
+.about__resume {
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.about__resume:active {
+  transform: translateY(0);
+}
+
+.about__resume:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+}
