@@ -1,6 +1,13 @@
 import './AboutSection.css'
 
 export default function AboutSection() {
+  const base = import.meta.env.BASE_URL
+  const graduationImage = `${base}images/graduation.jpg`
+  const ibmCertImage = `${base}certificates/ibm-java-developer-certificate.png`
+  const metaCertImage = `${base}certificates/meta-front-end-developer-certificate.png`
+  const awsCertImage = `${base}certificates/aws-certificate.png`
+  const certPlaceholder = `${base}certificates/cert-placeholder.svg`
+
   return (
     <section id="about" className="about">
       <div className="about__container">
@@ -52,9 +59,13 @@ export default function AboutSection() {
               </div>
               <div className="about__education-photo">
                 <img
-                  src="/images/graduation.jpg"
+                  src={graduationImage}
                   alt="Graduation at Wilmington University"
                   className="about__graduation-img"
+                  onError={(e) => {
+                    e.target.src = certPlaceholder
+                    e.target.alt = 'Add graduation photo as public/images/graduation.jpg'
+                  }}
                 />
               </div>
             </div>
@@ -63,49 +74,58 @@ export default function AboutSection() {
             <h3 className="about__block-title">Certifications</h3>
             <div className="about__certs">
               <a
-                href="/certificates/ibm-java-developer-certificate.png"
+                href={ibmCertImage}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="about__cert-item"
               >
                 <span className="about__cert-img-wrap">
                   <img
-                    src="/certificates/ibm-java-developer-certificate.png"
+                    src={ibmCertImage}
                     alt="Java and Design Patterns – IBM"
                     className="about__cert-img"
+                    onError={(e) => {
+                      e.target.src = certPlaceholder
+                      e.target.alt = 'Add IBM certificate image as public/certificates/ibm-java-developer-certificate.png'
+                    }}
                   />
                 </span>
                 <span className="about__cert-label">Java and Design Patterns – IBM</span>
               </a>
               <a
-                href="/certificates/meta-front-end-developer-certificate.png"
+                href={metaCertImage}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="about__cert-item"
               >
                 <span className="about__cert-img-wrap">
                   <img
-                    src="/certificates/meta-front-end-developer-certificate.png"
+                    src={metaCertImage}
                     alt="Meta Front-End Development Certification"
                     className="about__cert-img"
+                    onError={(e) => {
+                      e.target.src = certPlaceholder
+                      e.target.alt =
+                        'Add Meta certificate image as public/certificates/meta-front-end-developer-certificate.png'
+                    }}
                   />
                 </span>
                 <span className="about__cert-label">Meta Front-End Development Certification</span>
               </a>
               <a
-                href="/certificates/aws-certificate.png"
+                href={awsCertImage}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="about__cert-item"
               >
                 <span className="about__cert-img-wrap">
                   <img
-                    src="/certificates/aws-certificate.png"
+                    src={awsCertImage}
                     alt="AWS Certified Solutions Architect – Associate"
                     className="about__cert-img"
                     onError={(e) => {
-                      e.target.src = '/certificates/cert-placeholder.svg'
-                      e.target.alt = 'Add AWS certificate image as certificates/aws-certificate.png'
+                      e.target.src = certPlaceholder
+                      e.target.alt = 'Add AWS certificate image as public/certificates/aws-certificate.png'
                     }}
                   />
                 </span>
