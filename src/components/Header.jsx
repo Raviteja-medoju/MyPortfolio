@@ -81,20 +81,20 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <div className="site-header__theme-wrapper">
+        <div className="site-header__actions">
           <ThemeToggle />
+          <button
+            type="button"
+            className="site-header__menu"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
-        <button
-          type="button"
-          className="site-header__menu"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
       </div>
     </header>
   )
