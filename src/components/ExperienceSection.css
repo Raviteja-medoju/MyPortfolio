@@ -119,7 +119,10 @@
 
 .experience__bullets li {
   margin-bottom: 0.35rem;
-  opacity: 0;
+  opacity: 1;
+}
+
+.experience__card:hover .experience__bullets li {
   animation: fade-in-up 0.5s ease forwards;
 }
 
