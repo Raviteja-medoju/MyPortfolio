@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 const navLinks = [
@@ -80,6 +81,9 @@ export default function Header() {
             ))}
           </ul>
         </nav>
+        <div className="site-header__theme-wrapper">
+          <ThemeToggle />
+        </div>
         <button
           type="button"
           className="site-header__menu"

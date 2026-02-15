@@ -1,0 +1,116 @@
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg);
+  transition: background 0.5s ease;
+}
+
+.animated-bg__gradient {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float-gradient 20s ease-in-out infinite;
+}
+
+[data-theme='dark'] .animated-bg__gradient {
+  opacity: 0.2;
+}
+
+.animated-bg__gradient--1 {
+  width: 600px;
+  height: 600px;
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.animated-bg__gradient--2 {
+  width: 500px;
+  height: 500px;
+  top: 40%;
+  right: -5%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.35) 0%, transparent 70%);
+  animation-delay: -8s;
+  animation-duration: 22s;
+}
+
+.animated-bg__gradient--3 {
+  width: 450px;
+  height: 450px;
+  bottom: -10%;
+  left: 30%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+  animation-delay: -15s;
+  animation-duration: 28s;
+}
+
+.animated-bg__mesh {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 20%, transparent 80%);
+  animation: mesh-move 30s linear infinite;
+}
+
+[data-theme='dark'] .animated-bg__mesh {
+  background-image: 
+    linear-gradient(rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+}
+
+@keyframes float-gradient {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes mesh-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-bg__gradient--1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .animated-bg__gradient--2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .animated-bg__gradient--3 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .animated-bg__mesh {
+    background-size: 40px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-bg__gradient,
+  .animated-bg__mesh {
+    animation: none;
+  }
+}

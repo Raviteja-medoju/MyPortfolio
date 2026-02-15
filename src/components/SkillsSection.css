@@ -37,13 +37,36 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem 1.2rem;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+}
+
+.skills__group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(59, 130, 246, 0.08) 0%, 
+    transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .skills__group:hover {
-  transform: translateY(-2px);
-  border-color: rgba(59, 130, 246, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px) rotateX(5deg);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.skills__group:hover::before {
+  opacity: 1;
 }
 
 .skills__group-label {
@@ -114,13 +137,37 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+    border-color 0.3s ease, 
+    box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.skills__project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .skills__project-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px) rotateX(3deg) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(59, 130, 246, 0.15);
+}
+
+.skills__project-card:hover::after {
+  opacity: 1;
+}
+
+.skills__project-card:hover .skills__project-image {
+  transform: scale(1.08);
 }
 
 .skills__project-media {
@@ -134,6 +181,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skills__project-content {

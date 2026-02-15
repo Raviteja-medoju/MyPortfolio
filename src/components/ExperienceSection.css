@@ -32,17 +32,43 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.5rem 1.75rem;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.3s ease,
     background 0.3s ease,
     box-shadow 0.3s ease;
 }
 
+.experience__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.experience__card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .experience__card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) rotateX(2deg);
   border-color: rgba(59, 130, 246, 0.35);
   background: rgba(0, 0, 0, 0.03);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.experience__card:hover::before {
+  opacity: 1;
 }
 
 .experience__head {
@@ -93,8 +119,27 @@
 
 .experience__bullets li {
   margin-bottom: 0.35rem;
+  opacity: 0;
+  animation: fade-in-up 0.5s ease forwards;
 }
+
+.experience__card:hover .experience__bullets li:nth-child(1) { animation-delay: 0.05s; }
+.experience__card:hover .experience__bullets li:nth-child(2) { animation-delay: 0.1s; }
+.experience__card:hover .experience__bullets li:nth-child(3) { animation-delay: 0.15s; }
+.experience__card:hover .experience__bullets li:nth-child(4) { animation-delay: 0.2s; }
+.experience__card:hover .experience__bullets li:nth-child(5) { animation-delay: 0.25s; }
 
 .experience__bullets li:last-child {
   margin-bottom: 0;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

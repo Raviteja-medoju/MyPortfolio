@@ -16,6 +16,17 @@
   -webkit-font-smoothing: antialiased;
 }
 
+[data-theme='dark'] {
+  --bg: #0a0e1a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #60a5fa;
+  --accent-2: #a78bfa;
+  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #a78bfa 100%);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
 * {
   box-sizing: border-box;
 }

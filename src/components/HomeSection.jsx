@@ -1,4 +1,5 @@
 import SpringBootCode from './SpringBootCode'
+import { useTypingEffect } from '../hooks/useTypingEffect'
 import './HomeSection.css'
 
 const PILLS = [
@@ -20,7 +21,17 @@ const PILLS = [
   'GraphQL',
 ]
 
+const TYPED_ROLES = [
+  'Full-Stack Developer',
+  'Java Engineer',
+  'Spring Boot Expert',
+  'Cloud Architect',
+  'Microservices Developer',
+]
+
 export default function HomeSection() {
+  const typedRole = useTypingEffect(TYPED_ROLES, 100, 50, 2000)
+
   const scrollTo = (hash) => {
     const el = document.querySelector(hash)
     if (el) {
@@ -46,6 +57,10 @@ export default function HomeSection() {
           <h1 className="hero__title">
             Hi, I'm <span className="hero__title-highlight">Raviteja Medoju</span>
           </h1>
+          <p className="hero__typed-role">
+            <span className="hero__typed-text">{typedRole}</span>
+            <span className="hero__cursor">|</span>
+          </p>
           <p className="hero__tagline">
             <span className="hero__tagline-lead">
               Building scalable systems with Java & JVM ecosystem
