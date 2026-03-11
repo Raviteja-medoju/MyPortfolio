@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react'
 import './SkillsProgress.css'
 
 const SKILLS = [
-  { name: 'Java & Spring Boot', level: 95, color: '#3b82f6' },
-  { name: 'JavaScript & React', level: 90, color: '#6366f1' },
-  { name: 'AWS & Cloud Services', level: 85, color: '#8b5cf6' },
-  { name: 'Microservices Architecture', level: 88, color: '#a78bfa' },
-  { name: 'Docker & Kubernetes', level: 82, color: '#60a5fa' },
-  { name: 'SQL & MongoDB', level: 90, color: '#818cf8' },
-  { name: 'REST APIs & GraphQL', level: 92, color: '#3b82f6' },
-  { name: 'CI/CD & DevOps', level: 85, color: '#6366f1' },
+  { name: 'Java & Spring Boot', level: 95, color: 'var(--accent)' },
+  { name: 'JavaScript & React', level: 90, color: 'var(--accent-2)' },
+  { name: 'AWS & Cloud Services', level: 85, color: 'var(--accent)' },
+  { name: 'Microservices Architecture', level: 88, color: 'var(--accent-2)' },
+  { name: 'Docker & Kubernetes', level: 82, color: 'var(--accent)' },
+  { name: 'SQL & MongoDB', level: 90, color: 'var(--accent-2)' },
+  { name: 'REST APIs & GraphQL', level: 92, color: 'var(--accent)' },
+  { name: 'CI/CD & DevOps', level: 85, color: 'var(--accent-2)' },
 ]
 
 function SkillBar({ skill, index, isVisible }) {
@@ -35,7 +35,7 @@ function SkillBar({ skill, index, isVisible }) {
           className="skill-bar__fill"
           style={{
             width: `${width}%`,
-            background: `linear-gradient(90deg, ${skill.color}, ${skill.color}dd)`,
+            background: `linear-gradient(90deg, ${skill.color}, ${skill.color})`,
           }}
         >
           <div className="skill-bar__shine" />

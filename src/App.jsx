@@ -2,7 +2,7 @@ import Header from './components/Header'
 import ScrollProgress from './components/ScrollProgress'
 import ScrollObserver from './components/ScrollObserver'
 import AnimatedBackground from './components/AnimatedBackground'
-import LoadingScreen from './components/LoadingScreen'
+
 import SocialSidebar from './components/SocialSidebar'
 import ScrollToTop from './components/ScrollToTop'
 import HomeSection from './components/HomeSection'
@@ -17,7 +17,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <LoadingScreen />
+
       <AnimatedBackground />
       <ScrollProgress />
       <Header />

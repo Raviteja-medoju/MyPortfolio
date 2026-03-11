@@ -63,11 +63,8 @@
 .about__block::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.03), rgba(139, 92, 246, 0.03));
+  inset: 0;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.03), rgba(var(--accent-2-rgb), 0.03));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -79,10 +76,10 @@
 
 .about__block:hover {
   transform: translateY(-4px) rotateX(2deg);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   box-shadow: 
     0 8px 24px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(59, 130, 246, 0.1);
+    0 0 0 1px rgba(var(--accent-rgb), 0.1);
 }
 
 .about__block:hover::before {
@@ -111,30 +108,6 @@
   margin: 0.25rem 0 0;
 }
 
-.about__education-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.about__education-text {
-  flex: 1 1 320px;
-  min-width: 200px;
-}
-
-.about__education-photo {
-  flex-shrink: 0;
-  width: min(420px, 100%);
-  max-width: 100%;
-  aspect-ratio: 300 / 380;
-  height: auto;
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-}
-
 .about__coursework {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -142,39 +115,43 @@
   line-height: 1.5;
 }
 
-.about__masters-content {
+.about__highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   margin-top: 1.25rem;
 }
 
-.about__masters-heading {
-  font-size: 0.85rem;
+.about__highlight-item {
+  background: rgba(var(--accent-rgb), 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.about__highlight-item:hover {
+  border-color: rgba(var(--accent-rgb), 0.25);
+  transform: translateY(-2px);
+}
+
+.about__highlight-title {
+  font-size: 0.82rem;
   font-weight: 600;
-  color: var(--text);
-  margin: 1rem 0 0.35rem;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
 }
 
-.about__masters-heading:first-child {
-  margin-top: 0;
-}
-
-.about__masters-note {
-  font-size: 0.95rem;
+.about__highlight-text {
+  font-size: 0.9rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
-.about__graduation-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 @media (max-width: 640px) {
-  .about__education-photo {
-    width: min(320px, 100%);
-    aspect-ratio: 300 / 380;
+  .about__highlights {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -212,7 +189,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-2-rgb), 0.05));
   border-radius: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -223,8 +200,8 @@
   transform: translateY(-8px) rotateX(5deg) scale(1.02);
   box-shadow: 
     0 16px 40px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(59, 130, 246, 0.2);
-  background: rgba(59, 130, 246, 0.08);
+    0 0 0 1px rgba(var(--accent-rgb), 0.2);
+  background: rgba(var(--accent-rgb), 0.08);
 }
 
 .about__cert-item:hover::after {
@@ -243,8 +220,8 @@
 }
 
 .about__cert-item:hover .about__cert-img-wrap {
-  border-color: rgba(59, 130, 246, 0.35);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  border-color: rgba(var(--accent-rgb), 0.35);
+  box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.15);
 }
 
 .about__cert-img {
@@ -277,8 +254,8 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--accent);
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.35);
+  background: rgba(var(--accent-rgb), 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
   cursor: pointer;
@@ -290,8 +267,8 @@
 }
 
 .about__resume:hover {
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(var(--accent-2-rgb), 0.15);
   border-color: var(--accent-2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(var(--accent-2-rgb), 0.2);
 }

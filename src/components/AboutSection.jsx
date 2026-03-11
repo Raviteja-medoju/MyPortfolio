@@ -2,10 +2,8 @@ import './AboutSection.css'
 
 export default function AboutSection() {
   const base = import.meta.env.BASE_URL
-  const graduationImage = `${base}images/graduation.jpg`
   const ibmCertImage = `${base}certificates/ibm-java-developer-certificate.png`
   const metaCertImage = `${base}certificates/meta-front-end-developer-certificate.png`
-  const awsCertImage = `${base}certificates/aws-certificate.png`
   const certPlaceholder = `${base}certificates/cert-placeholder.svg`
 
   return (
@@ -24,49 +22,39 @@ export default function AboutSection() {
         <div className="about__blocks">
           <div className="about__block">
             <h3 className="about__block-title">Education</h3>
-            <div className="about__education-wrap">
-              <div className="about__education-text">
-                <p className="about__block-main">
-                  Master of Science in Information Systems Technology
+            <p className="about__block-main">
+              Master of Science in Information Systems Technology
+            </p>
+            <p className="about__block-sub">
+              Wilmington University · Aug 2023 – Mar 2025 · CGPA 3.85/4
+            </p>
+            <p className="about__coursework">
+              Coursework: Java, Programming, SDLC, DBMS, OS, Software Development, Full Stack Development
+            </p>
+            <div className="about__highlights">
+              <div className="about__highlight-item">
+                <h4 className="about__highlight-title">What I learned</h4>
+                <p className="about__highlight-text">
+                  System design, DBMS, SDLC, full-stack development; stronger Java and OS/systems thinking for real-world software.
                 </p>
-                <p className="about__block-sub">
-                  Wilmington University · Aug 2023 – Mar 2025 · CGPA 3.85/4
-                </p>
-                <p className="about__coursework">
-                  Coursework: Java, Programming, SDLC, DBMS, OS, Software Development, Full Stack Development
-                </p>
-                <div className="about__masters-content">
-                  <p className="about__masters-heading">What I learned</p>
-                  <p className="about__masters-note">
-                    System design and architecture, database design (DBMS), software development lifecycle (SDLC),
-                    and full-stack development. I strengthened my Java and programming fundamentals and learned to
-                    apply OS and systems thinking to real-world software problems.
-                  </p>
-                  <p className="about__masters-heading">Work I did</p>
-                  <p className="about__masters-note">
-                    Built full-stack applications and designed databases in course projects; followed SDLC and
-                    Agile practices from requirements through deployment. Delivered projects that combined
-                    backend logic, data modeling, and user interfaces.
-                  </p>
-                  <p className="about__masters-heading">How I use it in real-world projects</p>
-                  <p className="about__masters-note">
-                    I use this foundation every day: designing scalable systems and microservices at US Anesthesia
-                    Partners and M&T Bank, optimizing databases and REST APIs, and delivering end-to-end solutions
-                    in healthcare and finance. The SDLC and full-stack skills from my Master&apos;s directly support
-                    the Agile, full-stack, and cloud work I do now.
-                  </p>
-                </div>
               </div>
-              <div className="about__education-photo">
-                <img
-                  src={graduationImage}
-                  alt="Graduation at Wilmington University"
-                  className="about__graduation-img"
-                  onError={(e) => {
-                    e.target.src = certPlaceholder
-                    e.target.alt = 'Add graduation photo as public/images/graduation.jpg'
-                  }}
-                />
+              <div className="about__highlight-item">
+                <h4 className="about__highlight-title">Work I did</h4>
+                <p className="about__highlight-text">
+                  Full-stack apps and database design in course projects; SDLC and Agile from requirements to deployment.
+                </p>
+              </div>
+              <div className="about__highlight-item">
+                <h4 className="about__highlight-title">Learning & contribution in group work</h4>
+                <p className="about__highlight-text">
+                  Owned design and implementation; shared Java and DB knowledge; kept the team on track with clear communication and deadlines.
+                </p>
+              </div>
+              <div className="about__highlight-item">
+                <h4 className="about__highlight-title">How I use it in real-world projects</h4>
+                <p className="about__highlight-text">
+                  Designing scalable systems and microservices (US Anesthesia Partners, M&T Bank); optimizing DBs and REST APIs; end-to-end solutions in healthcare and finance.
+                </p>
               </div>
             </div>
           </div>
@@ -111,25 +99,6 @@ export default function AboutSection() {
                   />
                 </span>
                 <span className="about__cert-label">Meta Front-End Development Certification</span>
-              </a>
-              <a
-                href={awsCertImage}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="about__cert-item"
-              >
-                <span className="about__cert-img-wrap">
-                  <img
-                    src={awsCertImage}
-                    alt="AWS Certified Solutions Architect – Associate"
-                    className="about__cert-img"
-                    onError={(e) => {
-                      e.target.src = certPlaceholder
-                      e.target.alt = 'Add AWS certificate image as public/certificates/aws-certificate.png'
-                    }}
-                  />
-                </span>
-                <span className="about__cert-label">AWS Certified Solutions Architect – Associate</span>
               </a>
             </div>
           </div>

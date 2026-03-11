@@ -46,12 +46,9 @@
 .skills__group::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-    rgba(59, 130, 246, 0.08) 0%, 
+    rgba(var(--accent-rgb), 0.08) 0%, 
     transparent 50%);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -59,10 +56,10 @@
 
 .skills__group:hover {
   transform: translateY(-4px) rotateX(5deg);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   box-shadow: 
     0 8px 24px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(59, 130, 246, 0.1);
+    0 0 0 1px rgba(var(--accent-rgb), 0.1);
 }
 
 .skills__group:hover::before {
@@ -93,7 +90,7 @@
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-muted);
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 0.3rem 0.72rem;
   border-radius: 8px;
@@ -103,8 +100,8 @@
 
 .skills__tag:hover {
   color: var(--accent);
-  border-color: rgba(59, 130, 246, 0.4);
-  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  background: rgba(var(--accent-rgb), 0.08);
   transform: translateY(-1px);
 }
 
@@ -148,7 +145,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.05), rgba(var(--accent-2-rgb), 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -156,10 +153,10 @@
 
 .skills__project-card:hover {
   transform: translateY(-8px) rotateX(3deg) scale(1.02);
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
   box-shadow: 
     0 16px 48px rgba(0, 0, 0, 0.12),
-    0 0 0 1px rgba(59, 130, 246, 0.15);
+    0 0 0 1px rgba(var(--accent-rgb), 0.15);
 }
 
 .skills__project-card:hover::after {
@@ -172,7 +169,7 @@
 
 .skills__project-media {
   aspect-ratio: 16 / 9;
-  background: rgba(0, 0, 0, 0.03);
+  background: var(--bg-card);
   border-bottom: 1px solid var(--border);
 }
 

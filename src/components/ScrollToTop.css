@@ -20,7 +20,7 @@
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.3s ease;
   z-index: 999;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .scroll-to-top--visible {
@@ -31,7 +31,7 @@
 
 .scroll-to-top:hover {
   transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 8px 30px rgba(var(--accent-2-rgb), 0.4);
 }
 
 .scroll-to-top:active {

@@ -36,14 +36,10 @@
 .loading-screen__bar {
   width: 100%;
   height: 4px;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--bg-card);
   border-radius: 2px;
   overflow: hidden;
   margin-bottom: 1rem;
-}
-
-[data-theme='dark'] .loading-screen__bar {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .loading-screen__progress {

@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg: #ffffff;
+  --bg: #faf9f6;
   --bg-card: rgba(0, 0, 0, 0.04);
-  --text: #0f172a;
-  --text-muted: #334155;
-  --accent: #3b82f6;
-  --accent-2: #8b5cf6;
-  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
-  --border: rgba(0, 0, 0, 0.1);
+  --bg-card-solid: #f0eee9;
+  --text: #1a1a2e;
+  --text-muted: #555770;
+  --accent: #c49520;
+  --accent-2: #d4a843;
+  --accent-gradient: linear-gradient(135deg, #c49520 0%, #e8c547 100%);
+  --accent-rgb: 196, 149, 32;
+  --accent-2-rgb: 212, 168, 67;
+  --border: rgba(0, 0, 0, 0.08);
   font-family: 'Outfit', system-ui, sans-serif;
   line-height: 1.6;
   color: var(--text);
@@ -17,14 +20,17 @@
 }
 
 [data-theme='dark'] {
-  --bg: #0a0e1a;
-  --bg-card: rgba(255, 255, 255, 0.05);
-  --text: #e2e8f0;
-  --text-muted: #94a3b8;
-  --accent: #60a5fa;
-  --accent-2: #a78bfa;
-  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #a78bfa 100%);
-  --border: rgba(255, 255, 255, 0.1);
+  --bg: #0f1021;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-solid: #181a2e;
+  --text: #e8eaf0;
+  --text-muted: #8b8fa3;
+  --accent: #d4a843;
+  --accent-2: #e8c547;
+  --accent-gradient: linear-gradient(135deg, #d4a843 0%, #e8c547 100%);
+  --accent-rgb: 212, 168, 67;
+  --accent-2-rgb: 232, 197, 71;
+  --border: rgba(255, 255, 255, 0.06);
 }
 
 * {
@@ -42,24 +48,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Smooth transitions for all elements */
 * {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Scroll progress indicator */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: var(--accent-gradient);
-  z-index: 1001;
-  transform-origin: left;
-  transition: transform 0.1s ease-out;
-}
-
-/* Smooth fade-in for sections on scroll */
 section {
   opacity: 0;
   transform: translateY(30px);
@@ -94,7 +86,6 @@ a:hover {
   color: var(--accent-2);
 }
 
-/* Blue-purple gradient utility */
 .gradient-accent {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
