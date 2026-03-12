@@ -14,8 +14,7 @@ export default function AboutSection() {
           Software Engineer with <strong>5+ years</strong> of experience specializing in{' '}
           <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>React</strong>, and{' '}
           <strong>AWS</strong> for healthcare and financial applications. I build scalable,
-          secure microservices and full-stack solutions, optimize system performance by up to{' '}
-          <strong>40%</strong>, and automate CI/CD with Docker, Kubernetes, and Jenkins. I deliver
+          secure microservices and full-stack solutions, optimize system performance and automate CI/CD Pipelines with Docker, Kubernetes, and Jenkins. I deliver
           in Agile environments and drive data-driven decisions that improve user experience and
           business outcomes.
         </p>
@@ -26,7 +25,7 @@ export default function AboutSection() {
               Master of Science in Information Systems Technology
             </p>
             <p className="about__block-sub">
-              Wilmington University · Aug 2023 – Mar 2025 · CGPA 3.85/4
+              <b> Wilmington University</b>  · Aug 2023 – Mar 2025 · <b> CGPA 3.85/4</b>
             </p>
             <p className="about__coursework">
               Coursework: Java, Programming, SDLC, DBMS, OS, Software Development, Full Stack Development
@@ -39,23 +38,12 @@ export default function AboutSection() {
                 </p>
               </div>
               <div className="about__highlight-item">
-                <h4 className="about__highlight-title">Work I did</h4>
-                <p className="about__highlight-text">
-                  Full-stack apps and database design in course projects; SDLC and Agile from requirements to deployment.
-                </p>
-              </div>
-              <div className="about__highlight-item">
                 <h4 className="about__highlight-title">Learning & contribution in group work</h4>
                 <p className="about__highlight-text">
                   Owned design and implementation; shared Java and DB knowledge; kept the team on track with clear communication and deadlines.
                 </p>
               </div>
-              <div className="about__highlight-item">
-                <h4 className="about__highlight-title">How I use it in real-world projects</h4>
-                <p className="about__highlight-text">
-                  Designing scalable systems and microservices (US Anesthesia Partners, M&T Bank); optimizing DBs and REST APIs; end-to-end solutions in healthcare and finance.
-                </p>
-              </div>
+
             </div>
           </div>
           <div className="about__block">

@@ -11,7 +11,7 @@ const TYPED_ROLES = [
 
 const TICKER_ITEMS = [
   { value: '5+', label: 'Years of Experience' },
-  { value: '10+', label: 'Projects Shipped' },
+  { value: '5+', label: 'Projects Shipped' },
   { value: '3', label: 'Industries Served' },
   { value: '99.9%', label: 'Uptime Delivered' },
   { value: '10x', label: 'Performance Gains' },

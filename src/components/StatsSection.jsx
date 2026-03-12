@@ -3,9 +3,9 @@ import './StatsSection.css'
 
 const STATS = [
   { label: 'Years Experience', value: 5, suffix: '+' },
-  { label: 'Projects Delivered', value: 10, suffix: '+' },
+  { label: 'Projects Delivered', value: 5, suffix: '+' },
   { label: 'Technologies', value: 12, suffix: '+' },
-  { label: 'Success Rate', value: 99, suffix: '%' },
+  { label: 'Success Rate', value: 100, suffix: '%' },
 ]
 
 function CountUp({ end, duration = 2000, suffix = '' }) {
