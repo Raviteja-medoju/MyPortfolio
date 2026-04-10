@@ -155,6 +155,12 @@
   }
 }
 
+.about__edu-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1rem 0;
+}
+
 .about__list {
   margin: 0;
   padding-left: 1.2rem;
@@ -165,8 +171,14 @@
 
 .about__certs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .about__certs {
+    grid-template-columns: 1fr;
+  }
 }
 
 .about__cert-item {

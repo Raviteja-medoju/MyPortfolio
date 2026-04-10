@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import './StatsSection.css'
 
 const STATS = [
-  { label: 'Years Experience', value: 5, suffix: '+' },
-  { label: 'Projects Delivered', value: 5, suffix: '+' },
-  { label: 'Technologies', value: 12, suffix: '+' },
-  { label: 'Success Rate', value: 100, suffix: '%' },
+  { label: 'Years Experience', value: 4, suffix: '+' },
+  { label: 'Projects Delivered', value: 4, suffix: '+' },
+  { label: 'Technologies', value: 20, suffix: '+' },
+  { label: 'Uptime Delivered', value: 99.9, suffix: '%' },
 ]
 
 function CountUp({ end, duration = 2000, suffix = '' }) {
@@ -64,8 +64,8 @@ export default function StatsSection() {
         <div className="stats__header">
           <h2 className="stats__title">What I Can Do For You</h2>
           <p className="stats__desc">
-            Delivering enterprise-grade solutions with a focus on scalability,
-            security, and modern architecture.
+            Delivering HIPAA-compliant, enterprise-grade solutions with a focus
+            on scalability, security, and Generative AI integration.
           </p>
         </div>
         <div className="stats__grid">

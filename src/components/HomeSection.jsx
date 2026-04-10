@@ -5,28 +5,29 @@ const TYPED_ROLES = [
   'Full-Stack Developer',
   'Java Engineer',
   'Spring Boot Expert',
-  'Cloud Architect',
   'Microservices Developer',
+  'Gen AI Engineer',
 ]
 
 const TICKER_ITEMS = [
-  { value: '5+', label: 'Years of Experience' },
-  { value: '5+', label: 'Projects Shipped' },
-  { value: '3', label: 'Industries Served' },
+  { value: '4+', label: 'Years of Experience' },
+  { value: '4+', label: 'Enterprise Projects' },
+  { value: '10K+', label: 'Users Served' },
   { value: '99.9%', label: 'Uptime Delivered' },
-  { value: '10x', label: 'Performance Gains' },
-  { value: '0', label: 'Production Outages' },
-  { value: '50ms', label: 'API Response Times' },
-  { value: '∞', label: 'Coffee Consumed' },
+  { value: '<600ms', label: 'API Response' },
+  { value: '100K+', label: 'Daily HL7 Messages' },
+  { value: '85%', label: 'Code Coverage' },
+  { value: '30%', label: 'Latency Reduced' },
 ]
 
 const BRANDS = [
-  { name: 'IBM', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg', label: 'Java' },
+  { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg', label: 'Java' },
   { name: 'Spring', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg', label: 'Spring' },
   { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', label: 'React' },
   { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', label: 'AWS' },
   { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg', label: 'Docker' },
   { name: 'Kubernetes', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg', label: 'K8s' },
+  { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', label: 'Python' },
 ]
 
 export default function HomeSection() {
@@ -54,9 +55,10 @@ export default function HomeSection() {
               <span className="hero__name-highlight">Medoju</span>
             </h1>
             <p className="hero__desc">
-              A software engineer who builds scalable, secure microservices and
-              full-stack solutions for healthcare and financial applications,
-              with <strong>5+ years</strong> of experience.
+              A software engineer with <strong>4+ years</strong> of experience
+              designing scalable, HIPAA-compliant microservices for healthcare
+              and technology, bridging enterprise backend architecture with
+              cutting-edge <strong>Generative AI</strong>.
             </p>
             <p className="hero__typed-role">
               <span className="hero__typed-text">{typedRole}</span>

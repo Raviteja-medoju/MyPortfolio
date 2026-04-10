@@ -11,40 +11,41 @@ export default function AboutSection() {
       <div className="about__container">
         <h2 className="about__title">About Me</h2>
         <p className="about__summary">
-          Software Engineer with <strong>5+ years</strong> of experience specializing in{' '}
-          <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>React</strong>, and{' '}
-          <strong>AWS</strong> for healthcare and financial applications. I build scalable,
-          secure microservices and full-stack solutions, optimize system performance and automate CI/CD Pipelines with Docker, Kubernetes, and Jenkins. I deliver
-          in Agile environments and drive data-driven decisions that improve user experience and
-          business outcomes.
+          Software Engineer with <strong>4 years</strong> of experience designing scalable, secure,
+          and <strong>HIPAA-compliant</strong> microservices for the healthcare and technology sectors.
+          Expert in developing distributed backend systems using <strong>Core Java</strong>,{' '}
+          <strong>Spring Boot</strong>, and <strong>AWS</strong>, coupled with seamless frontend
+          integrations in <strong>React</strong>. Proven ability to bridge traditional enterprise
+          backend architecture with cutting-edge <strong>Generative AI</strong>, successfully
+          embedding LLM and RAG workflows into Java ecosystems to automate clinical processes.
+          Adept at optimizing database performance, implementing rigorous TDD methodologies, and
+          orchestrating containerized deployments via Docker and Kubernetes to reduce latency and
+          drive measurable business impact.
         </p>
         <div className="about__blocks">
           <div className="about__block">
             <h3 className="about__block-title">Education</h3>
             <p className="about__block-main">
-              Master of Science in Information Systems Technology
+              Master of Science in Information Technology
             </p>
             <p className="about__block-sub">
-              <b> Wilmington University</b>  · Aug 2023 – Mar 2025 · <b> CGPA 3.85/4</b>
+              <b>Wilmington University</b>, Wilmington, Delaware · Aug 2023 – May 2025
             </p>
             <p className="about__coursework">
               Coursework: Java, Programming, SDLC, DBMS, OS, Software Development, Full Stack Development
             </p>
-            <div className="about__highlights">
-              <div className="about__highlight-item">
-                <h4 className="about__highlight-title">What I learned</h4>
-                <p className="about__highlight-text">
-                  System design, DBMS, SDLC, full-stack development; stronger Java and OS/systems thinking for real-world software.
-                </p>
-              </div>
-              <div className="about__highlight-item">
-                <h4 className="about__highlight-title">Learning & contribution in group work</h4>
-                <p className="about__highlight-text">
-                  Owned design and implementation; shared Java and DB knowledge; kept the team on track with clear communication and deadlines.
-                </p>
-              </div>
 
-            </div>
+            <div className="about__edu-divider" />
+
+            <p className="about__block-main">
+              Bachelors of Technology in Information Technology
+            </p>
+            <p className="about__block-sub">
+              <b>Jawaharlal Nehru Technological University (JNTUH)</b>, India · July 2016 – May 2020
+            </p>
+            <p className="about__coursework">
+              Coursework: Data Structures and Algorithms, OOP (Java/Python), Operating Systems, DBMS, Software Engineering, Compiler Design, Computer Networks
+            </p>
           </div>
           <div className="about__block">
             <h3 className="about__block-title">Certifications</h3>
@@ -58,7 +59,7 @@ export default function AboutSection() {
                 <span className="about__cert-img-wrap">
                   <img
                     src={ibmCertImage}
-                    alt="Java and Design Patterns – IBM"
+                    alt="IBM Java Developer Professional Certificate"
                     className="about__cert-img"
                     onError={(e) => {
                       e.target.src = certPlaceholder
@@ -66,7 +67,7 @@ export default function AboutSection() {
                     }}
                   />
                 </span>
-                <span className="about__cert-label">Java and Design Patterns – IBM</span>
+                <span className="about__cert-label">IBM Java Developer Professional Certificate</span>
               </a>
               <a
                 href={metaCertImage}
@@ -81,8 +82,7 @@ export default function AboutSection() {
                     className="about__cert-img"
                     onError={(e) => {
                       e.target.src = certPlaceholder
-                      e.target.alt =
-                        'Add Meta certificate image as public/certificates/meta-front-end-developer-certificate.png'
+                      e.target.alt = 'Add Meta certificate image as public/certificates/meta-front-end-developer-certificate.png'
                     }}
                   />
                 </span>

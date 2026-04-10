@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import './SkillsProgress.css'
 
 const SKILLS = [
-  { name: 'Java & Spring Boot', level: 95, color: 'var(--accent)' },
-  { name: 'JavaScript & React', level: 90, color: 'var(--accent-2)' },
-  { name: 'AWS & Cloud Services', level: 85, color: 'var(--accent)' },
-  { name: 'Microservices Architecture', level: 88, color: 'var(--accent-2)' },
+  { name: 'Core Java & Spring Boot', level: 95, color: 'var(--accent)' },
+  { name: 'React & Frontend', level: 88, color: 'var(--accent-2)' },
+  { name: 'AWS & Cloud Platforms', level: 85, color: 'var(--accent)' },
+  { name: 'Microservices Architecture', level: 90, color: 'var(--accent-2)' },
   { name: 'Docker & Kubernetes', level: 82, color: 'var(--accent)' },
-  { name: 'SQL & MongoDB', level: 90, color: 'var(--accent-2)' },
-  { name: 'REST APIs & GraphQL', level: 92, color: 'var(--accent)' },
+  { name: 'SQL & Databases', level: 90, color: 'var(--accent-2)' },
+  { name: 'Generative AI & ML', level: 80, color: 'var(--accent)' },
   { name: 'CI/CD & DevOps', level: 85, color: 'var(--accent-2)' },
 ]
 

@@ -1,35 +1,48 @@
 import './SkillsSection.css'
 
 const GROUPS = [
-  { label: 'Programming Languages', items: ['Java', 'Python', 'JavaScript'] },
-  { label: 'Frontend', items: ['HTML', 'CSS', 'React.js', 'Bootstrap', 'Tailwind CSS'] },
-  { label: 'Backend', items: ['Spring Boot', 'Node.js'] },
+  { label: 'Languages', items: ['Core Java', 'JavaScript', 'Python', 'TypeScript', 'SQL', 'C/C++', 'Golang'] },
   {
-    label: 'Cloud & DevOps',
-    items: ['AWS', 'EC2', 'S3', 'Lambda', 'RDS', 'Docker', 'Kubernetes', 'Jenkins', 'Git', 'GitHub', 'GitLab CI/CD'],
+    label: 'Technologies',
+    items: ['React', 'React Native', 'Angular', 'Next.js', 'Node.js', 'Express.js', 'Flask', 'FastAPI', 'HTML', 'CSS', 'Redux', 'Spring Boot', 'Spring Security', 'Spring MVC', 'Hibernate', 'J2EE', 'JDBC', 'GraphQL', 'Jest', 'RESTful API', 'Microservices'],
   },
-  { label: 'API & Data', items: ['RESTful APIs', 'GraphQL', 'SQL', 'SQL Server', 'MySQL', 'MongoDB'] },
-  { label: 'Methodologies', items: ['Agile', 'Scrum'] },
+  { label: 'Databases', items: ['MySQL', 'SQL Server', 'PostgreSQL', 'NoSQL', 'MongoDB', 'Redis'] },
+  {
+    label: 'Cloud Platforms',
+    items: ['AWS (EC2, S3, Lambda, Redshift, RDS)', 'Microsoft Azure', 'GCP'],
+  },
+  {
+    label: 'Machine Learning',
+    items: ['Supervised & Unsupervised Learning', 'Deep Learning', 'NLP', 'RAG', 'LLMs', 'Transformer Models', 'Generative AI'],
+  },
+  {
+    label: 'DevOps',
+    items: ['CI/CD Pipelines', 'Docker', 'Kubernetes', 'Jenkins', 'Spark', 'Kafka', 'MLOps', 'Git', 'GitHub Actions'],
+  },
+  {
+    label: 'Other Skills',
+    items: ['Jira', 'Android', 'NPM', 'UML', 'Maven', 'Gradle', 'JUnit', 'Agile', 'Scrum', 'HIPAA Compliance', 'EHR', 'EMR', 'HL7'],
+  },
 ]
 
 const PROJECTS = [
   {
-    title: 'FinTech Loan & Credit Platform',
-    summary: 'Built secure microservices for loan origination, credit approvals, and transaction processing.',
-    tech: 'Java, Spring Boot, SQL Server, Kafka, AWS',
-    image: 'projects/fintech-loan-credit.svg',
+    title: 'Food Recognition & Nutrition Analysis',
+    summary: 'Trained a Deep Learning model with TensorFlow and EfficientNetB0 for food image recognition achieving 87% accuracy, integrated Edamam Food API into a Flutter app for real-time nutritional info.',
+    tech: 'TensorFlow, EfficientNetB0, Flutter, Edamam API, Deep Learning',
+    image: 'projects/food-recognition.svg',
   },
   {
-    title: 'FHIR/HL7 Integration Gateway',
-    summary: 'Developed APIs and integration flows for claims, scheduling, and patient interoperability.',
-    tech: 'Spring Boot, REST APIs, HL7, FHIR, SQL',
-    image: 'projects/fhir-hl7-gateway.svg',
+    title: 'Employee Attrition Prediction',
+    summary: 'Built from the ground up with React, Bootstrap, and Tailwind CSS for the frontend. Developed backend RESTful APIs, structured database models using MySQL, and deployed using Docker and AWS EC2.',
+    tech: 'React, Bootstrap, Tailwind CSS, MySQL, Docker, AWS EC2',
+    image: 'projects/employee-attrition.svg',
   },
   {
-    title: 'CI/CD Delivery Blueprint',
-    summary: 'Automated build-test-deploy workflow to improve release speed and reliability.',
-    tech: 'Jenkins, GitHub, Docker, Kubernetes, AWS',
-    image: 'projects/cicd-delivery-blueprint.svg',
+    title: 'Payment Transaction Microservices',
+    summary: 'Built scalable Java FinTech microservices using Spring Boot for secure, high-volume transaction processing. Containerized with Docker, improving deployment efficiency by 40%.',
+    tech: 'Java, Spring Boot, Docker, Microservices, FinTech',
+    image: 'projects/payment-microservices.svg',
   },
 ]
 
