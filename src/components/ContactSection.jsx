@@ -70,9 +70,8 @@ export default function ContactSection() {
               ))}
             </div>
             <a
-              href="/Raviteja_Medoju_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`${import.meta.env.BASE_URL}Raviteja_Medoju_Resume.docx`}
+              download="Raviteja_Medoju_Resume.docx"
               className="contact__resume"
             >
               <span className="contact__resume-icon" aria-hidden="true">
@@ -80,7 +79,7 @@ export default function ContactSection() {
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 1.5L18.5 8H14zM12 12l4 4h-2.5v3h-3v-3H8z" />
                 </svg>
               </span>
-              Download Resume (PDF)
+              Download Resume
             </a>
           </div>
           
