@@ -3,12 +3,13 @@ import './SkillsProgress.css'
 
 const SKILLS = [
   { name: 'Core Java & Spring Boot', level: 95, color: 'var(--accent)' },
+  { name: 'Generative AI & ML', level: 90, color: 'var(--accent)' },
   { name: 'React & Frontend', level: 88, color: 'var(--accent-2)' },
   { name: 'AWS & Cloud Platforms', level: 85, color: 'var(--accent)' },
   { name: 'Microservices Architecture', level: 90, color: 'var(--accent-2)' },
   { name: 'Docker & Kubernetes', level: 82, color: 'var(--accent)' },
   { name: 'SQL & Databases', level: 90, color: 'var(--accent-2)' },
-  { name: 'Generative AI & ML', level: 80, color: 'var(--accent)' },
+  
   { name: 'CI/CD & DevOps', level: 85, color: 'var(--accent-2)' },
 ]
 

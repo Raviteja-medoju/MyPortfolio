@@ -3,28 +3,32 @@ import './ExperienceSection.css'
 
 const JOBS = [
   {
-    company: 'US Anesthesia Partners',
+    company: 'USAP Inc.',
     role: 'Software Engineer',
     year: 'NOW',
     period: 'July 2025 – Present',
-    skills: 'Java, Spring Boot, Spring MVC, React JS, Spring Security, Tailwind CSS, SQL, AWS, Postman, REST API, Docker, Kubernetes',
+    logo: 'companies/usap-logo.png',
+    logoText: 'USAP',
+    skills: 'Java, Spring boot, Spring MVC, React JS, Azure, Spring Security, Tailwind CSS, SQL, Postman, Rest API, Docker, Kubernetes.',
     bullets: [
       'Architected a distributed, HIPAA-compliant EMR integration platform using Java 17 and Spring Boot, orchestrating the secure exchange of 100K+ daily HL7 messages across disparate hospital networks.',
       'Engineered secure, HIPAA-compliant RESTful APIs utilizing Java 17 and Spring Boot to manage real-time patient anesthesia records, supporting over 10,000 daily clinical transactions with 99.9% uptime.',
       'Spearheaded the backend integration of a Generative AI module using LangChain4j and Spring Boot, enabling a RAG architecture to securely query unstructured perioperative notes, saving clinicians an average of 1.5 hours per shift.',
       'Developed an intelligent scheduling microservice that consumed Python-trained NLP models via Java-based REST endpoints, automating the extraction of billing codes from operative reports and increasing coding accuracy by 18%.',
       'Implemented robust API security protocols utilizing Spring Security (OAuth2/JWT) and optimized relational database interactions, reducing patient data retrieval latency from 850ms to under 600ms.',
-      'Orchestrated the deployment of containerized Java applications onto AWS Elastic Kubernetes Service (EKS), configuring auto-scaling policies that seamlessly handled a 30% surge in web traffic during peak surgical hours.',
+      'Orchestrated the deployment of containerized Java applications onto Azure Kubernetes Service (AKS), configuring auto-scaling policies that seamlessly handled a 30% surge in web traffic during peak surgical hours.',
       'Collaborated tightly with frontend engineers to build responsive clinical dashboard components using React JS and Tailwind CSS, connecting them to secure Spring MVC controllers for real-time vitals monitoring.',
-      'Implemented event-driven solutions using Apache Kafka, enabling high-throughput messaging across banking modules.',
+      '•	Implemented event-driven solutions using Apache Kafka, enabling clinical data messaging across patient care modules.',
       'Cooperated with product managers, QA, and cross-functional teams in a 12-member Agile.',
     ],
   },
   {
-    company: 'IBM Inc',
-    role: 'Associate Software Engineer',
+    company: 'IBM Inc.',
+    role: 'Software Engineer',
     year: '2022',
     period: 'Apr 2022 – July 2023',
+    logo: 'companies/ibm-logo.png',
+    logoText: 'IBM',
     skills: 'Core Java, Java, Spring Boot, React JS, Angular, SQL, MongoDB, AWS, Lambda, Elastic Kubernetes',
     bullets: [
       'Developed and maintained robust RESTful web services using Core Java and Spring MVC to manage patient onboarding workflows, scaling the backend to support a 50% increase in active telehealth users during the Q3 rollout.',
@@ -36,10 +40,12 @@ const JOBS = [
     ],
   },
   {
-    company: 'Optum Inc',
-    role: 'Associate Software Engineer',
+    company: 'Optum Inc.',
+    role: 'Associate Software Engineer - Java Full Stack',
     year: '2020',
     period: 'June 2020 – Mar 2022',
+    logo: 'companies/optum-logo.png',
+    logoText: 'OPT',
     skills: 'Java, J2EE, SQL, MySQL, JavaScript, CI Pipeline, Maven, TDD, JUnit, Mockito, Scrum, Jira, Spring Frameworks',
     bullets: [
       'Programmed core business logic for a B2B inventory management module using Java 8 and the Spring Framework, successfully delivering 30+ critical user stories ahead of quarterly release schedules.',
@@ -121,6 +127,22 @@ export default function ExperienceSection() {
                 ref={(el) => (itemRefs.current[i] = el)}
               >
                 <div className="exp__left">
+                  <div
+                    className="exp__logo"
+                    data-initial={job.logoText}
+                    aria-hidden="true"
+                  >
+                    {job.logo && (
+                      <img
+                        src={`${import.meta.env.BASE_URL}${job.logo}`}
+                        alt={`${job.company} logo`}
+                        className="exp__logo-img"
+                        onError={(e) => {
+                          e.target.classList.add('exp__logo-img--missing')
+                        }}
+                      />
+                    )}
+                  </div>
                   <h3 className="exp__role">{job.role}</h3>
                   <span className="exp__year">{job.year}</span>
                   <p className="exp__company">{job.company}</p>

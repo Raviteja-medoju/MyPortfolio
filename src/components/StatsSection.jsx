@@ -62,10 +62,12 @@ export default function StatsSection() {
     <section className="stats">
       <div className="stats__container">
         <div className="stats__header">
-          <h2 className="stats__title">What I Can Do For You</h2>
+          <h2 className="stats__title">What Can I do for you?</h2>
           <p className="stats__desc">
-            Delivering HIPAA-compliant, enterprise-grade solutions with a focus
-            on scalability, security, and Generative AI integration.
+            Turning complex business problems into resilient, end-to-end products —
+            distributed backends, modern React frontends, secure cloud architectures,
+            and Generative AI integration that deliver measurable impact on speed,
+            cost, and growth.
           </p>
         </div>
         <div className="stats__grid">

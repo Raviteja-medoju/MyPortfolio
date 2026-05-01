@@ -1,27 +1,28 @@
 import './SkillsSection.css'
 
 const GROUPS = [
-  { label: 'Languages', items: ['Core Java', 'JavaScript', 'Python', 'TypeScript', 'SQL', 'C/C++', 'Golang'] },
+  { label: 'Languages', items: ['Core Java', 'JavaScript', 'Python', 'SQL', 'C/C++', 'Golang'] },
+  {
+    label: 'AI & Machine Learning',
+    items: ['Supervised & Unsupervised Learning', 'Deep Learning', 'NLP', 'RAG', 'LLMs','Generative AI'],
+  },
   {
     label: 'Technologies',
-    items: ['React', 'React Native', 'Angular', 'Next.js', 'Node.js', 'Express.js', 'Flask', 'FastAPI', 'HTML', 'CSS', 'Redux', 'Spring Boot', 'Spring Security', 'Spring MVC', 'Hibernate', 'J2EE', 'JDBC', 'GraphQL', 'Jest', 'RESTful API', 'Microservices'],
+    items: ['React', 'Angular', 'Node.js', 'Express.js', 'HTML', 'CSS', 'Spring Boot', 'Spring Security', 'Spring MVC', 'Hibernate', 'J2EE', 'JDBC', 'GraphQL', 'Jest', 'RESTful API', 'Microservices'],
   },
-  { label: 'Databases', items: ['MySQL', 'SQL Server', 'PostgreSQL', 'NoSQL', 'MongoDB', 'Redis'] },
+  { label: 'Databases', items: ['MySQL', 'SQL Server', 'PostgreSQL', 'NoSQL', 'MongoDB'] },
   {
     label: 'Cloud Platforms',
-    items: ['AWS (EC2, S3, Lambda, Redshift, RDS)', 'Microsoft Azure', 'GCP'],
+    items: ['AWS (EC2, S3, Lambda, Redshift, RDS)', 'Microsoft Azure'],
   },
-  {
-    label: 'Machine Learning',
-    items: ['Supervised & Unsupervised Learning', 'Deep Learning', 'NLP', 'RAG', 'LLMs', 'Transformer Models', 'Generative AI'],
-  },
+
   {
     label: 'DevOps',
-    items: ['CI/CD Pipelines', 'Docker', 'Kubernetes', 'Jenkins', 'Spark', 'Kafka', 'MLOps', 'Git', 'GitHub Actions'],
+    items: ['CI/CD Pipelines', 'Docker', 'Kubernetes', 'Jenkins','Kafka', 'MLOps', 'Git'],
   },
   {
     label: 'Other Skills',
-    items: ['Jira', 'Android', 'NPM', 'UML', 'Maven', 'Gradle', 'JUnit', 'Agile', 'Scrum', 'HIPAA Compliance', 'EHR', 'EMR', 'HL7'],
+    items: ['Jira', 'NPM', 'Maven', 'Gradle', 'JUnit', 'Agile', 'Scrum'],
   },
 ]
 
